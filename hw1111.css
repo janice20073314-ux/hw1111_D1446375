@@ -1,0 +1,276 @@
+/* ==========================================================
+   「綠空漫泡，綠川漾沫」專題外部 CSS 樣式表
+   ========================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: "Microsoft JhengHei", "PingFang TC", sans-serif;
+    font-size: 17px;
+    line-height: 1.85;
+    color: #3b3a36;
+    background-color: #f7f6f0;
+}
+
+/* 1. 頂部導覽列設計 (Header & Nav) */
+header.top-nav {
+    background-color: #2e4f4f;
+    color: #ffffff;
+    padding: 20px 30px;
+    border-top: 6px solid #0e8388;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+header.top-nav h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 0.05em;
+}
+
+header.top-nav nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 15px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background 0.3s;
+}
+
+header.top-nav nav a:hover,
+header.top-nav nav a:focus-visible {
+    background-color: #0e8388;
+    text-decoration: underline;
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+/* 2. 網頁主體排版：左右兩欄格線 (側邊欄 + 主內容) */
+.page-layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 25px;
+    align-items: start;
+}
+
+/* 3. 左側邊欄 (Aside 導覽) */
+aside.left-sidebar {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #d4d2c9;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 20px;
+}
+
+aside.left-sidebar h2 {
+    font-size: 1.2rem;
+    color: #2e4f4f;
+    margin-top: 0;
+    border-left: 4px solid #0e8388;
+    padding-left: 10px;
+}
+
+aside.left-sidebar ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+aside.left-sidebar li {
+    margin-bottom: 8px;
+}
+
+aside.left-sidebar a {
+    color: #0e8388;
+    text-decoration: none;
+}
+
+aside.left-sidebar a:hover {
+    text-decoration: underline;
+    color: #2e4f4f;
+}
+
+/* 4. 文章章節與盒子模型 (Main & Section) */
+main.main-content article section,
+main.main-content article aside {
+    margin: 0 0 25px 0;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #d4d2c9;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+h2 {
+    margin: 0 0 18px;
+    padding-left: 12px;
+    border-left: 4px solid #0e8388;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    color: #2e4f4f;
+}
+
+h3 {
+    margin: 22px 0 10px;
+    font-size: 1.1rem;
+    color: #2e4f4f;
+}
+
+p {
+    margin: 12px 0;
+}
+
+ul, ol {
+    padding-left: 1.6em;
+}
+
+li {
+    margin: 8px 0;
+}
+
+hr {
+    margin: 26px 0;
+    border: 0;
+    border-top: 1px solid #d4d2c9;
+}
+
+/* 5. 特殊類別樣式 */
+.reading-focus {
+    background-color: #e2e8e4;
+    color: #2e4f4f;
+    padding: 2px 6px;
+    font-weight: bold;
+}
+
+.report-disclaimer {
+    font-style: italic;
+    color: #666;
+}
+
+.route-note {
+    border-left: 4px solid #0e8388;
+    padding-left: 14px;
+    background-color: #f2f6f5;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+/* 6. 表格樣式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95em;
+    overflow-wrap: anywhere;
+    margin: 15px 0;
+}
+
+caption {
+    margin-bottom: 12px;
+    text-align: left;
+    font-weight: bold;
+    color: #2e4f4f;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #cbd5c4;
+    text-align: left;
+    vertical-align: top;
+}
+
+thead {
+    background-color: #e1e9db;
+    color: #2e4f4f;
+}
+
+tbody th {
+    background-color: #f0f3e9;
+}
+
+/* 7. 圖片與嵌入媒體 */
+figure {
+    margin: 18px 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+}
+
+figcaption {
+    margin-top: 10px;
+    color: #536359;
+    font-size: 0.85em;
+}
+
+iframe {
+    display: block;
+    max-width: 100%;
+    border: 0;
+    border-radius: 6px;
+}
+
+.video-frame {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+
+.map-frame {
+    width: 100%;
+    height: 340px;
+}
+
+/* 8. 補充小提醒區塊 */
+#tips {
+    background-color: #edf0dd;
+    border-left: 5px solid #8b9459;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #2e4f4f;
+}
+
+/* 9. 頁尾設計 */
+footer {
+    background-color: #2e4f4f;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #a2d2df;
+}
+
+/* 10. 響應式調整 (手機螢幕轉為單欄) */
+@media (max-width: 850px) {
+    .page-layout {
+        grid-template-columns: 1fr;
+    }
+    header.top-nav {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    header.top-nav nav a {
+        margin: 0 4px;
+    }
+}
